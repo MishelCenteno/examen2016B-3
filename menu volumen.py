@@ -12,11 +12,11 @@
         #TIBANTA LEGÑA MARIA FERNANDA
 from time import*
 
-def creartxt2(nombre):
+def creartxt(nombre):
     archi = open(nombre,"w") #ESTA FUNCION CREA LOS ARCHIVOS DE TEXTO
     archi.close() #RECIBE EL NOMBRE DEL ARCHIVO DE TEXTO
     
-def grabartxt2(cadena,name):
+def grabartxt(cadena,name):
     archi=open(name,"a") #ESTA FUNCION GRABA LA CADENA EN EL ARCHIVO DE TEXTO
     archi.write(cadena + "\n") #RECIBE EL NOMBRE DEL ARCHIVO DE TEXTO DONDE GRABAR
     archi.close()
@@ -31,15 +31,15 @@ def names():
     total = m1 + e + m2 + e + m3 + e + m4 + e + m5 #AQUI SE CONCATENA LOS INTEGRANTES
     return total #AQUI RETORNA LA CADENA FINAL
 
-def mainscrip():
-    creartxt2("nombres.txt")
-    creartxt2("nombres2.txt") #AQUI CREO LOS ARCHIVOS TXT
+def main():
+    creartxt("nombres.txt")
+    creartxt("nombres2.txt") #AQUI CREO LOS ARCHIVOS TXT
     for i in range (690):
-        grabartxt2(names(),"nombres.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 100 KB
+        grabartxt(names(),"nombres.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 100 KB
         
     print("PRIMERO CREADO CORRECTAMENTE") #MENSAJE DE FINALIZACION
     for i in range (7040):
-        grabartxt2(names(),"nombres2.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 1024 KB
+        grabartxt(names(),"nombres2.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 1024 KB
     print("SEGUNDO CREADO CORRECTAMENTE")#MENSAJE DE FINALIZACION
 
 #Concurrecias del  texto
@@ -80,7 +80,7 @@ def leertxt():
     archi.close()
     grabartxt(repetidas,resultado)
 
-def mainC():
+def main1():
     leertxt()
 
 
@@ -93,7 +93,8 @@ def pis_rect():
     b=float(input("Ingrese el valor del largo de la piscina: "))
     c=float(input("Ingrese el valor del ancho de la piscina: "))
     volumenR=a*b*c
-    print("Volumen de la priscina en forma de prisma rectangular es: ", volumenR)
+    v = round(volumenR,2)
+    print("Volumen de la priscina en forma de prisma rectangular es: ", v)
 
 
 def pis_elip():
@@ -103,7 +104,9 @@ def pis_elip():
     c=float(input("Ingrese el valor del radio3: "))
     pi=3.14
     volumenE=4/3*pi*a*b*c
-    print("Volumen de la piscina elipsoide es: ", volumenE)
+    v2 = round(volumenE,2)
+    print("Volumen de la piscina elipsoide es: ", v2)
+    
 
 
 def pis_cir():
@@ -112,7 +115,8 @@ def pis_cir():
     h=float(input("Ingrese el valor de la altura: "))
     pi=3.14
     volumenC=pi*r**2*h
-    print("Volumen de una piscina eliptica es: ", volumenC)
+    v3 = round(volumenC,2)
+    print("Volumen de una piscina eliptica es: ", v3)
     
 
 def menu():
@@ -126,10 +130,10 @@ def menu():
         opcion=int(input("Ingrese la opcion que desea elegir:"))
         if (opcion==1):
             print("generar un scrip de 100 KB y un scrip de 1024 KB")
-            mainscrip()
+            main()
         if (opcion==2):
             print("Ocurrencias en  el  texto")
-            mainC()
+            main1()
         if (opcion==3):
             print("el volumen ")
             menu_piscina()
