@@ -13,7 +13,28 @@ def menu():
             print("ocurrencias")
         if (opcion==3):
             print("el volumen ")
+            menu_piscina()
         if (opcion==4):
             print ("Adios")      
+
+def menu_piscina():
+    opcion=0;
+    while(opcion!=4):
+        print("Calcular el volumen de una piscina")
+        print("1.Volumen de forma rectangular")
+        print("2.3Volumen de forma eliptica")
+        print("3.volumen de forma cilindrica")
+        opcion=int(input("Selecione: "))
+        if (opcion==1):
+            print("Volumen de forma rectangular")
+        if (opcion==2):
+            print("Volumen de froma eliptica")
+        if (opcion==3):
+            print("Volumen  de forma cilindrica")
+        if (opcion==4):
+            print ("Adios")
+
 menu()
+
+
 
