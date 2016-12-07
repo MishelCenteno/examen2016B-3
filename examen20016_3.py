@@ -54,10 +54,10 @@ def leertxt():
     
     archi.close()
     
-    archi=open('resultado.txt','a')#Crea el archivo donde se almacena los resultados
-    archi.write('Numero de palabras repetidas es :\n ')
+    archi=open('resultado.txt','a')          #Crea el archivo donde se almacena los resultados
+    archi.write('Numero de palabras repetidas es :')
     archi.write(str(repetidas))
-    archi.write("Tiempo transcurrido")
+    archi.write("\t Tiempo transcurrido:")
     archi.write(str(resultado))
 
 leertxt()
