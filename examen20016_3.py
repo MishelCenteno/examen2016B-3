@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ESCUELA POLITECNICA NACIONAL
 #Escuela de formacion de tecnologos
 
@@ -46,7 +45,7 @@ def leertxt():
     archi.write(str(resultado))
 
 leertxt()
-=======
+
 #ESCUELA POLITECNICA NACIONAL
 #Escuela de formacion de tecnologos
 
@@ -100,4 +99,4 @@ def main():
     leertxt()
 
 main()
->>>>>>> f97d353a87022731ab0a878caa9074ab122e173b
+
