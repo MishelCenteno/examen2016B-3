@@ -25,13 +25,13 @@ def grabartxt():
     archi.write("Jorge Estefania Camila Jorge Maza")
     archi.write("Camila Jorge ")
     archi.write("Jorge Estefania Camila Jorge Maza")
-creartxt()
-grabartxt()
+#creartxt()
+#grabartxt()
 
 def leertxt():
     repetidas=0
-    clave='Jorge'
-    archi=open ('busqueda.txt','r')
+    clave='JORGE'
+    archi=open ('nombres.txt','r')
     
     t_inicial=time()
                                               #Abre el archivo 
