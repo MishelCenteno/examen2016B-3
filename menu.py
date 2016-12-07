@@ -88,70 +88,67 @@ def mainC():
 #Volumenes de la piscina
 
 def pis_rect():
-    print ("Volumen de una piscina rectangular")
+    print ("\nVolumen de una piscina rectangular")
     a=float(input("Ingrese el valor la altura: "))
     b=float(input("Ingrese el valor del largo de la piscina: "))
     c=float(input("Ingrese el valor del ancho de la piscina: "))
     volumenR=a*b*c
-    print("Volumen de la priscina en forma de prisma rectangular es: ", volumenR)
+    print("\nVolumen de la priscina en forma de prisma rectangular es: ", volumenR)
 
 
 def pis_elip():
-    print ("Volumen de una piscina eliptica")
+    print ("\nVolumen de una piscina eliptica")
     a=float(input("Ingrese el valor del radio1: "))
     b=float(input("Ingrese el valor del redio2: "))
     c=float(input("Ingrese el valor del radio3: "))
-    volumenE=4/3*math.pi*a*b*c
-    print("Volumen de la piscina elipsoide es: ", volumenE)
+    volumenE=(4/3)*(math.pi)*a*b*c
+    print("\nVolumen de la piscina elipsoide es: ", volumenE)
 
 
 def pis_cir():
-    print ("Volumen de una piscina cilindrica")
+    print ("\nVolumen de una piscina cilindrica")
     r=float(input("Ingrese el valor del radio: "))
     h=float(input("Ingrese el valor de la altura: "))
-    pi=3.14
-    volumenC=math.pi*r**2*h
-    print("Volumen de una piscina eliptica es: ", volumenC)
+    volumenC=(math.pi)*(r**2)*h
+    print("\nVolumen de la piscina cilindrica es: ", volumenC)
     
 
 def menu():
     opcion=0;
-    while(opcion!=3):
-        print("\tMenu del programa")
+    while(opcion!=4):
+        print("\nMenu del programa\n")
         print("1.Scrip")
-        print("2.Calcular el volumen de una piscina ")
-        print("3.Salir")
-        opcion=int(input("Ingrese la opcion que desea elegir:"))
+        print("2.Contabilizar las repeticiones ")
+        print("3.Calcular el volumen de una piscina ")
+        print("4.Salir")
+        opcion=int(input("\nIngrese la opcion que desea elegir:"))
         if (opcion==1):
-            print("generar un scrip de 100 KB y un scrip de 1024 KB")
+            print("\nGenerar un scrip de 100 KB y un scrip de 1024 KB")
             mainscrip()
-            print("Ocurrencias en  el  texto")
-            mainC()
         if (opcion==2):
-            print("el volumen ")
-            menu_piscina()
+            print("\nOcurrencias en  el  texto")
+            mainC()
         if (opcion==3):
+            print("\nCalculo del volumen de una piscina ")
+            menu_piscina()
+        if (opcion==4):
             print ("Adios")      
 
 def menu_piscina():
     opcion=0;
     while(opcion!=4):
-        print("Calcular el volumen de una piscina")
-        print("1.Volumen de forma rectangular")
+        print("\n1.Volumen de forma rectangular")
         print("2.Volumen de forma eliptica")
         print("3.volumen de forma cilindrica")
         print("4.Salir")
-        opcion=int(input("Selecione: "))
-        if (opcion==1):
-            
+        opcion=int(input("\nSelecione la forma de la piscina: "))
+        if (opcion==1):           
             pis_rect()
             menu()
-        if (opcion==2):
-            
+        if (opcion==2):            
             pis_elip()
             menu()
-        if (opcion==3):
-            
+        if (opcion==3):            
             pis_cir()
             menu()
         if (opcion==4):
