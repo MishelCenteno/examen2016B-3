@@ -116,10 +116,37 @@ def pis_cir():
     v3 = round(volumenC,2)
     print("Volumen de una piscina eliptica es: ", v3)
     
+def menu_piscina():
+    opcion2=0;
+    e=False
+    while(e ==False):
+        print("Calcular el volumen de una piscina")
+        print("1.Volumen de forma rectangular")
+        print("2.Volumen de forma eliptica")
+        print("3.volumen de forma cilindrica")
+        print("4.Salir")
+        opcion2=int(input("Seleccione: \n"))
+        if (opcion2==1):
+            
+            pis_rect()
+            menu()
+        if (opcion2==2):
+            
+            pis_elip()
+            menu()
+        if (opcion2==3):
+            
+            pis_cir()
+            menu()
+        if (opcion2==4):
+            print ("Adios")
+        e=True
+    
 
 def menu():
     opcion=0;
-    while(opcion!=3):
+    p = False
+    while(p == False):
         print("\tMenu del programa")
         print("1.Scrip y Concurrencias")
         print("2.Calcular el volumen de una piscina ")
@@ -134,30 +161,8 @@ def menu():
             print("el volumen ")
             menu_piscina()
         if (opcion==3):
-            print ("Adios")      
-
-def menu_piscina():
-    opcion=0;
-    while(opcion!=4):
-        print("Calcular el volumen de una piscina")
-        print("1.Volumen de forma rectangular")
-        print("2.Volumen de forma eliptica")
-        print("3.volumen de forma cilindrica")
-        print("4.Salir")
-        opcion=int(input("Seleccione: \n"))
-        if (opcion==1):
-            
-            pis_rect()
-            menu()
-        if (opcion==2):
-            
-            pis_elip()
-            menu()
-        if (opcion==3):
-            
-            pis_cir()
-            menu()
-        if (opcion==4):
             print ("Adios")
+            p = True
+
 
 menu()
