@@ -121,19 +121,17 @@ def menu():
         print("Menu del programa")
         print("1.Scrip")
         print("2.Contabilizar las repeticiones ")
-        print("3.Calcular el volumen de una piscina ")
-        print("4.Salir")
+        print("3.Salir")
         opcion=int(input("Ingrese la opcion que desea elegir:"))
         if (opcion==1):
-            print("generar un scrip de 100 KB y un scrip de 1024 KB")
+            print("Generar un scrip de 100 KB y un scrip de 1024 KB")
             mainscrip()
-        if (opcion==2):
             print("Ocurrencias en  el  texto")
             mainC()
-        if (opcion==3):
+        if (opcion==2):
             print("el volumen ")
             menu_piscina()
-        if (opcion==4):
+        if (opcion==3):
             print ("Adios")      
 
 def menu_piscina():
