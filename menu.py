@@ -116,23 +116,21 @@ def pis_cir():
 
 def menu():
     opcion=0;
-    while(opcion!=4):
-        print("Menu del programa")
+    while(opcion!=3):
+        print("\tMenu del programa")
         print("1.Scrip")
-        print("2.Contabilizar las repeticiones ")
-        print("3.Calcular el volumen de una piscina ")
-        print("4.Salir")
+        print("2.Calcular el volumen de una piscina ")
+        print("3.Salir")
         opcion=int(input("Ingrese la opcion que desea elegir:"))
         if (opcion==1):
             print("generar un scrip de 100 KB y un scrip de 1024 KB")
             mainscrip()
-        if (opcion==2):
             print("Ocurrencias en  el  texto")
             mainC()
-        if (opcion==3):
+        if (opcion==2):
             print("el volumen ")
             menu_piscina()
-        if (opcion==4):
+        if (opcion==3):
             print ("Adios")      
 
 def menu_piscina():
