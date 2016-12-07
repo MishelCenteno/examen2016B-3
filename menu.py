@@ -12,11 +12,11 @@
         #TIBANTA LEGÑA MARIA FERNANDA
 from time import*
 
-def creartxt(nombre):
+def creartxt2(nombre):
     archi = open(nombre,"w") #ESTA FUNCION CREA LOS ARCHIVOS DE TEXTO
     archi.close() #RECIBE EL NOMBRE DEL ARCHIVO DE TEXTO
     
-def grabartxt(cadena,name):
+def grabartxt2(cadena,name):
     archi=open(name,"a") #ESTA FUNCION GRABA LA CADENA EN EL ARCHIVO DE TEXTO
     archi.write(cadena + "\n") #RECIBE EL NOMBRE DEL ARCHIVO DE TEXTO DONDE GRABAR
     archi.close()
@@ -31,15 +31,15 @@ def names():
     total = m1 + e + m2 + e + m3 + e + m4 + e + m5 #AQUI SE CONCATENA LOS INTEGRANTES
     return total #AQUI RETORNA LA CADENA FINAL
 
-def main():
-    creartxt("nombres.txt")
-    creartxt("nombres2.txt") #AQUI CREO LOS ARCHIVOS TXT
+def mainscrip():
+    creartxt2("nombres.txt")
+    creartxt2("nombres2.txt") #AQUI CREO LOS ARCHIVOS TXT
     for i in range (690):
-        grabartxt(names(),"nombres.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 100 KB
+        grabartxt2(names(),"nombres.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 100 KB
         
     print("PRIMERO CREADO CORRECTAMENTE") #MENSAJE DE FINALIZACION
     for i in range (7040):
-        grabartxt(names(),"nombres2.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 1024 KB
+        grabartxt2(names(),"nombres2.txt") #AQUI LLENO EL ARCHIVO REPITIENDO N VECES HASTA Q PESE APROX 1024 KB
     print("SEGUNDO CREADO CORRECTAMENTE")#MENSAJE DE FINALIZACION
 
 #Concurrecias del  texto
@@ -80,7 +80,7 @@ def leertxt():
     archi.close()
     grabartxt(repetidas,resultado)
 
-def main1():
+def mainC():
     leertxt()
 
 
@@ -126,10 +126,10 @@ def menu():
         opcion=int(input("Ingrese la opcion que desea elegir:"))
         if (opcion==1):
             print("generar un scrip de 100 KB y un scrip de 1024 KB")
-            main()
+            mainscrip()
         if (opcion==2):
             print("Ocurrencias en  el  texto")
-            main1()
+            mainC()
         if (opcion==3):
             print("el volumen ")
             menu_piscina()
