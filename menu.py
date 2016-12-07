@@ -11,7 +11,7 @@
         #PADILLA PERALVO EDISON GEOVANNNY
         #TIBANTA LEGÑA MARIA FERNANDA
 from time import*
-
+import math
 def creartxt2(nombre):
     archi = open(nombre,"w") #ESTA FUNCION CREA LOS ARCHIVOS DE TEXTO
     archi.close() #RECIBE EL NOMBRE DEL ARCHIVO DE TEXTO
@@ -101,8 +101,7 @@ def pis_elip():
     a=float(input("Ingrese el valor del radio1: "))
     b=float(input("Ingrese el valor del redio2: "))
     c=float(input("Ingrese el valor del radio3: "))
-    pi=3.14
-    volumenE=4/3*pi*a*b*c
+    volumenE=4/3*math.pi*a*b*c
     print("Volumen de la piscina elipsoide es: ", volumenE)
 
 
@@ -111,7 +110,7 @@ def pis_cir():
     r=float(input("Ingrese el valor del radio: "))
     h=float(input("Ingrese el valor de la altura: "))
     pi=3.14
-    volumenC=pi*r**2*h
+    volumenC=math.pi*r**2*h
     print("Volumen de una piscina eliptica es: ", volumenC)
     
 
@@ -121,17 +120,19 @@ def menu():
         print("Menu del programa")
         print("1.Scrip")
         print("2.Contabilizar las repeticiones ")
-        print("3.Salir")
+        print("3.Calcular el volumen de una piscina ")
+        print("4.Salir")
         opcion=int(input("Ingrese la opcion que desea elegir:"))
         if (opcion==1):
-            print("Generar un scrip de 100 KB y un scrip de 1024 KB")
+            print("generar un scrip de 100 KB y un scrip de 1024 KB")
             mainscrip()
+        if (opcion==2):
             print("Ocurrencias en  el  texto")
             mainC()
-        if (opcion==2):
+        if (opcion==3):
             print("el volumen ")
             menu_piscina()
-        if (opcion==3):
+        if (opcion==4):
             print ("Adios")      
 
 def menu_piscina():
@@ -144,15 +145,15 @@ def menu_piscina():
         print("4.Salir")
         opcion=int(input("Selecione: "))
         if (opcion==1):
-            print("Volumen de forma rectangular")
+            
             pis_rect()
             menu()
         if (opcion==2):
-            print("Volumen de froma eliptica")
+            
             pis_elip()
             menu()
         if (opcion==3):
-            print("Volumen  de forma cilindrica")
+            
             pis_cir()
             menu()
         if (opcion==4):
