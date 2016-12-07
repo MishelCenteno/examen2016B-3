@@ -1,33 +1,35 @@
 print ("VOLUMEN DE UNA PISCINA")
-
-def pis_rect():
-    print ("Volumen de una piscina rectangular")
-    a=float(input("Ingrese el valor la altura: "))
-    b=float(input("Ingrese el valor del largo de la piscina: "))
-    c=float(input("Ingrese el valor del ancho de la piscina: "))
-    volumenR=a*b*c
-    print("Volumen de la priscina en forma de prisma rectangular es: ", volumenR)
-
-
-def pis_elip():
-    print ("Volumen de una piscina eliptica")
-    a=float(input("Ingrese el valor del radio1: "))
-    b=float(input("Ingrese el valor del redio2: "))
-    c=float(input("Ingrese el valor del radio3: "))
-    pi=3.14
-    volumenE=4/3*pi*a*b*c
-    print("Volumen de la piscina elipsoide es: ", volumenE)
+import math
+opcion = int(input("Opciones:\n1 : Piscina rectangular\n2 : Piscina eliptica\n3 : Piscina Circular\n4 : Salir\n"))
+while opcion == 1 or opcion == 2 or opcion == 3:
+    if (opcion != 1 or opcion != 2 or opcion != 3):
+      print("salir")
+    else:
+        if opcion == 1:
+            print ("Volumen de una piscina rectangular")
+            a=float(input("Ingrese el valor de la altura: "))
+            b=float(input("Ingrese el valor del largo de la piscina: "))
+            c=float(input("Ingrese el valor del ancho de la piscina: "))
+            volumenR=a*b*c
+            print("Volumen de la piscina de forma rectangular es: ", volumenR)
 
 
-def pis_cir():
-    print ("Volumen de una piscina cilindrica")
-    r=float(input("Ingrese el valor del radio: "))
-    h=float(input("Ingrese el valor de la altura: "))
-    pi=3.14
-    volumenC=pi*r**2*h
-    print("Volumen de una piscina eliptica es: ", volumenC)
+        if opcion == 2:
+            print ("Volumen de una piscina eliptica")
+            a=float(input("Ingrese el valor del eje mayor: "))
+            b=float(input("Ingrese el valor del eje menor: "))
+            c=float(input("Ingrese el valor de la altura: "))
+            volumenE=math.pi*((a/2)*(b/2)*c)
+            print("Volumen de la piscina de forma eliptica es: ", volumenE)
+
+
+        if opcion == 3:
+            print ("Volumen de una piscina cilindrica")
+            r=float(input("Ingrese el valor del radio: "))
+            h=float(input("Ingrese el valor de la altura: "))
+            volumenC=math.pi*r**2*h
+            print("Volumen de una piscina de forma circular es: ", volumenC)
     
 
-pis_rect()
-pis_elip()
-pis_cir()
+    print("")
+    opcion = int(input("Opciones:\n1 : Piscina rectangular\n2 : Piscina eliptica\n3 : Piscina Circular\n4 : Salir"))
