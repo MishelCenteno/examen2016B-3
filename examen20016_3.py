@@ -10,31 +10,23 @@
 
 from time import *
 
-def creartxt():
-    archi=open('busqueda.txt','w')
+def creartxt(name):
+    archi=open(name,'w')
     archi.close
     
 
-def grabartxt():
-    archi=open('busqueda.txt','a')
-    archi.write("Camila Jorge ")
-    archi.write("Jorge Estefania Camila Jorge Maza")
-    archi.write("Camila Jorge ")
-    archi.write("Jorge Estefania Camila Jorge Maza")
-    archi.write("Camila Jorge ")
-    archi.write("Jorge Estefania Camila Jorge Maza")
-    archi.write("Camila Jorge ")
-    archi.write("Jorge Estefania Camila Jorge Maza")
-#creartxt()
-#grabartxt()
-
+def grabartxt(repetidas,resultado):
+    archi=open('resultados.txt','a')          #Crea el archivo donde se almacena los resultados
+    archi.write('Numero de palabras repetidas es :' + str(repetidas) )
+    archi.write("\t Tiempo transcurrido:" + str(resultado) )
+    
 def leertxt():
+    creartxt("resultados.txt")
     repetidas=0
     clave='JORGE'
     archi=open ('nombres.txt','r')
     
-    t_inicial=time()
-                                              #Abre el archivo 
+    t_inicial=time()                          #Abre el archivo 
     linea=archi.readline()                    # lee la linea del archivo
     palabras=linea.split(' ')                 # separa la linea leida quitando los espacios
     cadena=len(palabras)                      #cadena es igualada al numero de palabras que fueron separadas en el comando anterior
@@ -53,11 +45,9 @@ def leertxt():
     resultado=t_final-t_inicial
     
     archi.close()
-    
-    archi=open('resultado.txt','a')          #Crea el archivo donde se almacena los resultados
-    archi.write('Numero de palabras repetidas es :')
-    archi.write(str(repetidas))
-    archi.write("\t Tiempo transcurrido:")
-    archi.write(str(resultado))
+    grabartxt(repetidas,resultado)
 
-leertxt()
+def main():
+    leertxt()
+
+main()
